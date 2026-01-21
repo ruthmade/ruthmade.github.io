@@ -26,6 +26,7 @@ async function fetchRepos() {
         return !repo.private &&
             repo.homepage &&
             repo.homepage.includes('ruthmade.com') &&
+            !repo.name.includes('github.io') &&
             repo.name !== 'ruthmade.com' &&
             !repo.fork;
     });
