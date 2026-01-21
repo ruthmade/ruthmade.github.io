@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ruthmade - Useful tools for families</title>
+    <meta name="description" content="Practical tools for health, family, and everyday life. Made by a stay-at-home mom who builds what she uses.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    body {
+        font-family: Georgia, 'Times New Roman', serif;
+        background: linear-gradient(135deg, #F5F1E8 0%, #E8DCC8 100%);
+        color: #4A4238;
+        min-height: 100vh;
+        padding: 40px 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        border: 3px solid #B8C5B0;
+        display: block;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #4A4238;
+        margin-bottom: 15px;
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
+
+    .tagline {
+        font-size: 1.2em;
+        color: #8FA39A;
+        margin-bottom: 25px;
+        font-style: italic;
+    }
+
+    .intro {
+        max-width: 600px;
+        margin: 0 auto 60px;
+        font-size: 1.05em;
+        line-height: 1.8;
+        color: #4A4238;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .project-card {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid rgba(184, 197, 176, 0.3);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .project-card:hover {
+        border-color: #B8C5B0;
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(74, 66, 56, 0.15);
+    }
+
+    .project-screenshot {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: top;
+        background: #F5F1E8;
+    }
+
+    .project-info {
+        padding: 25px;
+    }
+
+    .project-title {
+        font-size: 1.4em;
+        color: #4A4238;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .project-description {
+        font-size: 0.95em;
+        color: #8FA39A;
+        line-height: 1.6;
+    }
+
+    footer {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 2px solid #B8C5B0;
+        color: #8FA39A;
+        font-size: 0.95em;
+    }
+
+    footer a {
+        color: #8FA39A;
+        text-decoration: none;
+        border-bottom: 1px solid #B8C5B0;
+        transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #D4A895;
+        border-bottom-color: #D4A895;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Ru" class="profile-pic">
+            <h1>ruthmade</h1>
+            <div class="tagline">Useful tools, made at home for families.</div>
+            <div class="intro">
+                I'm Ru, a stay-at-home mom who builds practical tools for health, family, and everyday life. Everything here is something I actually use.
+            </div>
+        </header>
+
+    <div class="projects-grid" id="projects">
+        <!-- Projects will be inserted here by build script -->
+    </div>
+
+    <footer>
+        Find me on <a href="https://x.com/rubyruth" target="_blank" rel="noopener">@rubyruth</a>
+    </footer>
+</div>
+
+</body>
+</html>
