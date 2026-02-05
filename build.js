@@ -34,15 +34,8 @@ async function fetchRepos() {
             !EXCLUDED_REPOS.includes(repo.name);
     });
 
-    // Sort: repos with homepages first, then by date
+    // Sort by creation date, newest first
     filtered.sort(function (a, b) {
-        // Prioritize repos with ruthmade.com homepages
-        const aHasHomepage = a.homepage && a.homepage.includes('ruthmade.com');
-        const bHasHomepage = b.homepage && b.homepage.includes('ruthmade.com');
-        
-        if (aHasHomepage && !bHasHomepage) return -1;
-        if (!aHasHomepage && bHasHomepage) return 1;
-        
         return new Date(b.created_at) - new Date(a.created_at);
     });
 
