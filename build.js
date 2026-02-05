@@ -199,9 +199,15 @@ async function generatePreviewImage(repo, outputPath) {
     }
 }
 
+// Words that should stay ALL CAPS
+const PRESERVE_CAPS = ['csv', 'cli', 'api', 'url', 'html', 'css', 'sql', 'ai', 'ui', 'ux'];
+
 function generateProjectHTML(repo, imageFilename, hasWebsite) {
     const titleWords = repo.name.split('-');
     const title = titleWords.map(function (word) {
+        if (PRESERVE_CAPS.includes(word.toLowerCase())) {
+            return word.toUpperCase();
+        }
         return word.charAt(0).toUpperCase() + word.slice(1);
     }).join(' ');
 
@@ -239,7 +245,8 @@ async function build() {
         const imageFilename = repo.name + '.jpg';
         const imagePath = path.join(distDir, imageFilename);
         
-        const hasWebsite = repo.homepage && repo.homepage.includes('ruthmade.com');
+        // Take screenshot if repo has any valid homepage URL
+        const hasWebsite = repo.homepage && (repo.homepage.startsWith('http://') || repo.homepage.startsWith('https://'));
 
         try {
             let success = false;
